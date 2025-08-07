@@ -89,15 +89,24 @@ export function serveStatic(app: Express) {
     );
   }
 
+  // Add debugging middleware to see all requests
+  app.use((req, res, next) => {
+    console.log(`[DEBUG] ${req.method} ${req.originalUrl} - ${req.headers['user-agent']?.substring(0, 50)}`);
+    next();
+  });
+
   app.use(express.static(distPath));
 
   // fall through to index.html if the file doesn't exist
   // BUT exclude API routes from this catch-all
   app.use("*", (req, res, next) => {
+    console.log(`[STATIC FALLBACK] ${req.method} ${req.originalUrl}`);
     // Don't serve index.html for API routes
     if (req.originalUrl.startsWith('/api') || req.originalUrl === '/' || req.originalUrl === '/health') {
+      console.log(`[STATIC FALLBACK] Skipping static serve for API route: ${req.originalUrl}`);
       return next();
     }
+    console.log(`[STATIC FALLBACK] Serving index.html for: ${req.originalUrl}`);
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
