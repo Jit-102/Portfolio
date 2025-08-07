@@ -6,30 +6,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Helper function to safely load Replit plugins
-async function getReplitPlugins() {
-  const plugins = [];
-  
-  // Only load Replit plugins in Replit environment
-  if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
-    try {
-      const runtimeErrorOverlay = await import("@replit/vite-plugin-runtime-error-modal");
-      plugins.push(runtimeErrorOverlay.default());
-      
-      const cartographer = await import("@replit/vite-plugin-cartographer");
-      plugins.push(cartographer.cartographer());
-    } catch (error) {
-      console.log("Replit plugins not available, skipping...");
-    }
-  }
-  
-  return plugins;
-}
-
-export default defineConfig(async () => ({
+export default defineConfig({
   plugins: [
     react(),
-    ...(await getReplitPlugins()),
   ],
   resolve: {
     alias: {
