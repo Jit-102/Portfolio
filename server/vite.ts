@@ -92,14 +92,9 @@ export function serveStatic(app: Express) {
   // Serve static files
   app.use(express.static(distPath));
 
-  // Serve React app for all non-API routes
+  // Serve React app for all other routes (catch-all)
   app.get("*", (req, res) => {
-    // Skip if it's an API route - let it fall through to 404
-    if (req.path.startsWith('/api') || req.path === '/' || req.path === '/health') {
-      return res.status(404).json({ error: 'Not found' });
-    }
-    
-    // Serve React app for all other routes
+    console.log(`[CATCH-ALL] Serving ${req.path}`);
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
