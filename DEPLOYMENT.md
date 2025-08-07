@@ -1,57 +1,69 @@
 # Deployment Guide - Jit Goria Portfolio
 
-## 🚀 Deploy to GitHub + Railway (Free)
+## 🚀 Multiple Free Hosting Options
 
-### Step 1: Push to Your GitHub Repository
-1. **Create the repository** at https://github.com/Jit-102/Portfolio (if not already created)
-2. **Add remote and push**:
-   ```bash
-   git remote add origin https://github.com/Jit-102/Portfolio.git
-   git push -u origin main
-   ```
-3. Your code is now on GitHub at: https://github.com/Jit-102/Portfolio
+Since Railway is having SIGTERM issues, here are alternative free hosting platforms:
 
-### Step 2: Deploy to Railway
-1. Go to [railway.app](https://railway.app)
-2. Sign up/login with GitHub
-3. Click "New Project"
-4. Select "Deploy from GitHub repo"
-5. Choose this repository
-6. Railway will automatically detect it's a Node.js app
-7. **Important**: Name your project "jit-goria-portfolio" for a personalized URL
+## Option 1: Render (Recommended)
 
-### Step 3: Add Database
-1. In your Railway project dashboard, click "New Service"
-2. Select "Database" → "PostgreSQL"
-3. Railway will create a free PostgreSQL database
-4. Copy the DATABASE_URL from the database service
+### Step 1: Deploy to Render
+1. **Go to [render.com](https://render.com)**
+2. **Sign up with GitHub**
+3. **Click "New +" → "Web Service"**
+4. **Connect your GitHub repo**: `Jit-102/Portfolio`
+5. **Configure**:
+   - **Name**: `jit-goria-portfolio`
+   - **Environment**: `Node`
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+   - **Instance Type**: `Free`
 
-### Step 4: Set Environment Variables
-In your Railway app service, go to Variables tab and add:
+### Step 2: Add Environment Variables
 ```
-DATABASE_URL=<paste the database URL from step 3>
+DATABASE_URL=<will be provided by Render PostgreSQL>
 NODE_ENV=production
 SESSION_SECRET=JitGoriaPortfolio2024SecretKey
-PORT=5000
+PORT=10000
 ```
 
-### Step 5: Deploy
-1. Railway will automatically build and deploy your app
-2. You'll get a free `.railway.app` domain
-3. Your app will be live in a few minutes!
+### Step 3: Add Database (Optional)
+1. **Create PostgreSQL database** in Render
+2. **Copy DATABASE_URL** to your web service
 
-## Alternative: One-Click Deploy
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/your-template)
+**Your portfolio will be live at**: `https://jit-goria-portfolio.onrender.com`
 
-## Free Tier Limits
-- 500 execution hours per month
-- $5 credit monthly (usually enough for small apps)
-- Free PostgreSQL database
-- Custom domain support
+---
 
-## Post-Deployment
-1. Run database migrations: `npm run db:push`
-2. Test all functionality
-3. Set up monitoring (optional)
+## Option 2: Vercel (Frontend + Serverless)
 
-Your professional dashboard will be live at: `https://jit-goria-portfolio.railway.app`
+### Step 1: Deploy to Vercel
+1. **Go to [vercel.com](https://vercel.com)**
+2. **Import your GitHub repo**: `Jit-102/Portfolio`
+3. **Vercel auto-detects** and deploys
+
+**Your portfolio will be live at**: `https://jit-goria-portfolio.vercel.app`
+
+---
+
+## Option 3: Netlify (Static + Functions)
+
+### Step 1: Deploy to Netlify
+1. **Go to [netlify.com](https://netlify.com)**
+2. **New site from Git** → Select your repo
+3. **Build settings**:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist/public`
+
+**Your portfolio will be live at**: `https://jit-goria-portfolio.netlify.app`
+
+---
+
+## 🎯 Recommendation
+
+**Try Render first** - it's most similar to Railway but more stable for Node.js apps.
+
+All platforms offer:
+- ✅ Free hosting
+- ✅ Automatic deployments from GitHub
+- ✅ Custom domains
+- ✅ HTTPS included
