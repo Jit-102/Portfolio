@@ -1,10 +1,15 @@
 # Deployment Guide - Jit Goria Portfolio
 
-## Quick Deploy to Railway (Free)
+## 🚀 Deploy to GitHub + Railway (Free)
 
-### Step 1: Prepare Your Repository
-1. Make sure all your code is committed to Git
-2. Push to GitHub if not already there
+### Step 1: Push to Your GitHub Repository
+1. **Create the repository** at https://github.com/Jit-102/Portfolio (if not already created)
+2. **Add remote and push**:
+   ```bash
+   git remote add origin https://github.com/Jit-102/Portfolio.git
+   git push -u origin main
+   ```
+3. Your code is now on GitHub at: https://github.com/Jit-102/Portfolio
 
 ### Step 2: Deploy to Railway
 1. Go to [railway.app](https://railway.app)
