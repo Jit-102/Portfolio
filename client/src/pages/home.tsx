@@ -23,7 +23,10 @@ import {
   Handshake,
   MessageSquare,
   Menu,
-  X
+  X,
+  AlertTriangle,
+  CheckCircle,
+  Zap
 } from "lucide-react";
 import profImagePath from "@assets/20250725_174731_1754561854223.jpg";
 
@@ -172,16 +175,16 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
                 <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Senior Product Manager
+                  Product Leader &<br />Systems Thinker
                 </h1>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <Badge className="bg-white/20 text-white border-white/30 text-sm">18+ Team Leader</Badge>
-                  <Badge className="bg-white/20 text-white border-white/30 text-sm">B2B SaaS Expert</Badge>
-                  <Badge className="bg-white/20 text-white border-white/30 text-sm">20K+ Schools Served</Badge>
-                  <Badge className="bg-white/20 text-white border-white/30 text-sm">92% Security Improvement</Badge>
+                  <Badge className="bg-white/20 text-white border-white/30 text-sm">Bridge Builder</Badge>
+                  <Badge className="bg-white/20 text-white border-white/30 text-sm">AI/ML Pioneer</Badge>
+                  <Badge className="bg-white/20 text-white border-white/30 text-sm">Scale Architect</Badge>
+                  <Badge className="bg-white/20 text-white border-white/30 text-sm">Impact Driver</Badge>
                 </div>
                 <p className="text-xl mb-8 text-white/90 leading-relaxed">
-                  Senior Product Manager with 5+ years driving growth in edtech and SaaS platforms. Led 18-member cross-functional teams, reduced system downtime by 30%, and scaled products serving 20,000+ schools. Expert in AI-driven DevOps automation, data analytics, and delivering measurable business impact through product excellence.
+                  I believe exceptional products emerge from the intersection of <span className="font-semibold text-yellow-200">human empathy</span>, <span className="font-semibold text-blue-200">technical possibility</span>, and <span className="font-semibold text-green-200">business strategy</span>. My mission: transforming complex challenges into elegant solutions that people actually want to use.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button 
@@ -212,265 +215,240 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Timeline */}
+      {/* Product Philosophy */}
       <section id="experience" className="py-20 bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Professional Experience</h2>
-              <p className="text-xl text-muted-foreground">A journey of building products that matter</p>
+              <h2 className="text-4xl font-bold text-foreground mb-4">My Product Philosophy</h2>
+              <p className="text-xl text-muted-foreground">How I approach complex challenges and create products people love</p>
             </div>
             
-            <div className="timeline-line space-y-12">
-              {/* Current Role */}
-              <div className="flex items-start space-x-8">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <Briefcase className="w-6 h-6 text-primary-foreground" />
-                  </div>
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <Card className="card-hover text-center p-8">
+                <div className="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-10 h-10 text-yellow-600" />
                 </div>
-                <Card className="card-hover flex-1">
-                  <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground">Product & Engineering Manager</h3>
-                        <p className="text-primary font-semibold">Creamcollar</p>
-                      </div>
-                      <Badge variant="secondary">May 2024 - Present</Badge>
-                    </div>
-                    <div className="space-y-3 mb-4">
-                      <p className="text-muted-foreground">
-                        • Led 18-member cross-functional team developing multi-sided B2B SaaS platform connecting SDV industries, academic institutions, and recruitment organizations
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-green-600">Reduced system downtime by 30%</span> through AI-driven DevOps automation with MCP architecture implementation
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-green-600">Achieved 92% reduction in security vulnerabilities</span> via rigorous CI/CD pipelines using GitHub Actions and SonarQube
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-green-600">Increased product delivery velocity by 13%</span> through strategic alignment of technical execution with business objectives
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline">AI/ML Systems</Badge>
-                      <Badge variant="outline">DevOps Automation</Badge>
-                      <Badge variant="outline">B2B SaaS</Badge>
-                      <Badge variant="outline">Team Leadership</Badge>
-                      <Badge variant="outline">Security</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
+                <h3 className="text-xl font-bold text-foreground mb-4">Human-First Design</h3>
+                <p className="text-muted-foreground">
+                  Every feature starts with understanding real user pain. I spend time with actual users, not just personas. Technology should feel invisible, not impressive.
+                </p>
+              </Card>
+              
+              <Card className="card-hover text-center p-8">
+                <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Settings className="w-10 h-10 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Systems Thinking</h3>
+                <p className="text-muted-foreground">
+                  Products exist within complex ecosystems. I map dependencies, anticipate ripple effects, and design for resilience at scale.
+                </p>
+              </Card>
+              
+              <Card className="card-hover text-center p-8">
+                <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="w-10 h-10 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Data-Driven Intuition</h3>
+                <p className="text-muted-foreground">
+                  Numbers tell stories, but context gives them meaning. I combine quantitative insights with qualitative understanding to make confident decisions.
+                </p>
+              </Card>
+            </div>
+            
+            {/* Problem-Solving Approach */}
+            <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-2xl mb-12">
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">How I Solve Complex Product Challenges</h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary-foreground font-bold">1</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">Deep Dive</h4>
+                  <p className="text-sm text-muted-foreground">Understand the real problem, not just symptoms</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-accent-foreground font-bold">2</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">Map Systems</h4>
+                  <p className="text-sm text-muted-foreground">Identify all stakeholders and dependencies</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold">3</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">Prototype Fast</h4>
+                  <p className="text-sm text-muted-foreground">Test hypotheses quickly with real users</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold">4</span>
+                  </div>
+                  <h4 className="font-semibold mb-2">Scale Smart</h4>
+                  <p className="text-sm text-muted-foreground">Build for today's needs, architect for tomorrow's growth</p>
+                </div>
               </div>
+            </div>
+            
+            {/* Product Case Studies */}
+            <div className="space-y-12">
+              <h3 className="text-3xl font-bold text-foreground text-center mb-8">How I Think: Real Product Challenges</h3>
+              
+              {/* Case Study 1 */}
+              <Card className="card-hover">
+                <CardContent className="p-8">
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div>
+                      <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mb-4">
+                        <AlertTriangle className="w-6 h-6 text-red-600" />
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2">The Challenge</h4>
+                      <p className="text-sm text-muted-foreground">30% system downtime was killing user trust in our B2B platform. Traditional monitoring wasn't catching issues fast enough.</p>
+                    </div>
+                    <div>
+                      <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center mb-4">
+                        <Lightbulb className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2">My Approach</h4>
+                      <p className="text-sm text-muted-foreground">Instead of just better alerts, I designed an AI-driven system that predicts failures before they happen. We shifted from reactive to proactive.</p>
+                    </div>
+                    <div>
+                      <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4">
+                        <CheckCircle className="w-6 h-6 text-green-600" />
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2">The Result</h4>
+                      <p className="text-sm text-muted-foreground">30% downtime reduction in 6 months. But more importantly: users started trusting our platform again, leading to 13% higher delivery velocity.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-              {/* Previous Role 1 */}
-              <div className="flex items-start space-x-8">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg">
-                    <Rocket className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                </div>
-                <Card className="card-hover flex-1">
-                  <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground">Project Manager - Govt. Accounts</h3>
-                        <p className="text-accent font-semibold">Embibe-Jio</p>
+              {/* Case Study 2 */}
+              <Card className="card-hover">
+                <CardContent className="p-8">
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div>
+                      <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mb-4">
+                        <Users className="w-6 h-6 text-orange-600" />
                       </div>
-                      <Badge variant="secondary">Nov 2023 - Apr 2024</Badge>
+                      <h4 className="font-bold text-foreground mb-2">The Challenge</h4>
+                      <p className="text-sm text-muted-foreground">20,000+ schools needed to onboard onto our EdTech platform, but traditional sales cycles were too slow for government accounts.</p>
                     </div>
-                    <div className="space-y-3 mb-4">
-                      <p className="text-muted-foreground">
-                        • Delivered 3 major product releases serving <span className="font-semibold text-blue-600">20,000+ schools</span> through strategic cross-functional collaboration
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-blue-600">Improved roadmap alignment by 25%</span> by bridging technical requirements with business stakeholder needs
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-blue-600">Reduced post-release defects by 30%</span> through implementation of automated testing and agile QA frameworks
-                      </p>
-                      <p className="text-muted-foreground">
-                        • Performed cohort analysis that <span className="font-semibold text-blue-600">increased student engagement by 17%</span> via data-driven behavioral insights
-                      </p>
+                    <div>
+                      <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center mb-4">
+                        <Zap className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2">My Strategy</h4>
+                      <p className="text-sm text-muted-foreground">Built a self-service onboarding flow that let schools experience value immediately. Used behavioral data to identify and remove friction points.</p>
                     </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline">Product Strategy</Badge>
-                      <Badge variant="outline">Data Analytics</Badge>
-                      <Badge variant="outline">EdTech Scale</Badge>
-                      <Badge variant="outline">Quality Engineering</Badge>
-                      <Badge variant="outline">Stakeholder Management</Badge>
+                    <div>
+                      <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4">
+                        <TrendingUp className="w-6 h-6 text-green-600" />
+                      </div>
+                      <h4 className="font-bold text-foreground mb-2">The Impact</h4>
+                      <p className="text-sm text-muted-foreground">17% increase in student engagement because schools could start using the platform within hours, not weeks. Cohort analysis revealed the key insight.</p>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-              {/* Previous Role 2 */}
-              <div className="flex items-start space-x-8">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <Card className="card-hover flex-1">
-                  <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground">Product Specialist - GTM</h3>
-                        <p className="text-green-600 font-semibold">Embibe-Jio</p>
-                      </div>
-                      <Badge variant="secondary">Jul 2019 - Nov 2023</Badge>
-                    </div>
-                    <div className="space-y-3 mb-4">
-                      <p className="text-muted-foreground">
-                        • Built and launched <span className="font-semibold text-purple-600">first monetization model</span> for multi-sided platform through strategic GTM initiatives across B2C, B2B, and B2G segments
-                      </p>
-                      <p className="text-muted-foreground">
-                        • Led team of 4 in UAT execution for <span className="font-semibold text-purple-600">AR/VR simulation platform</span>, successfully resolving 35,000+ content and functional issues
-                      </p>
-                      <p className="text-muted-foreground">
-                        • <span className="font-semibold text-purple-600">Reduced project delays by 15%</span> through implementation of Jira workflows with sprint dashboards and enhanced team accountability
-                      </p>
-                      <p className="text-muted-foreground">
-                        • Authored comprehensive PRDs and led bug resolution workflows that improved product stability and streamlined QA collaboration
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline">Go-to-Market Strategy</Badge>
-                      <Badge variant="outline">Revenue Generation</Badge>
-                      <Badge variant="outline">AR/VR Products</Badge>
-                      <Badge variant="outline">Agile Methodologies</Badge>
-                      <Badge variant="outline">Technical Writing</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Unique Value Section */}
       <section id="skills" className="py-20 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Core Competencies</h2>
-              <p className="text-xl text-muted-foreground">Technical depth + business acumen + proven results</p>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="flex items-center bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full">
-                  <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                  <span className="font-semibold text-green-700 dark:text-green-300">5+ Years Product Leadership</span>
+              <h2 className="text-4xl font-bold text-foreground mb-4">What Makes Me Different</h2>
+              <p className="text-xl text-muted-foreground">Beyond typical product management - my unique edge in the market</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <Card className="card-hover p-8">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Technical Product Leader</h3>
+                    <p className="text-muted-foreground">Most PMs talk about technical debt. I actually fix it. I architect systems, write automation scripts, and speak fluent developer.</p>
+                  </div>
                 </div>
-                <div className="flex items-center bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                  <span className="font-semibold text-blue-700 dark:text-blue-300">AI/ML Integration Expert</span>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">AI/ML system integration & deployment</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">DevOps automation & infrastructure design</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">Full-stack product architecture</span>
+                  </div>
                 </div>
-                <div className="flex items-center bg-purple-50 dark:bg-purple-900/20 px-4 py-2 rounded-full">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                  <span className="font-semibold text-purple-700 dark:text-purple-300">Cross-Functional Leadership</span>
+              </Card>
+              
+              <Card className="card-hover p-8">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Scale-First Mindset</h3>
+                    <p className="text-muted-foreground">I don't just build features - I architect systems for millions of users. Every decision considers the next 10x growth phase.</p>
+                  </div>
                 </div>
-              </div>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">20K+ schools served simultaneously</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">Multi-sided platform architecture</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="text-muted-foreground">Enterprise B2B & government accounts</span>
+                  </div>
+                </div>
+              </Card>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Product Strategy */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+            <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">My Product Decision Framework</h3>
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Product Strategy & Design</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Product Roadmap Planning</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>User Experience Design (Figma)</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>A/B Testing & Experimentation</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Competitive Analysis</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Product-Market Fit</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Data Analytics */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                    <BarChart3 className="w-8 h-8 text-accent" />
+                  <h4 className="font-bold text-foreground mb-2">Data Tells the Story</h4>
+                  <p className="text-sm text-muted-foreground">I don't make decisions based on opinions. Every choice is backed by cohort analysis, user behavior patterns, and business impact metrics.</p>
+                </div>
+                
+                <div>
+                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Data Science & Analytics</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Google BigQuery & SQL</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Tableau & Looker Studio</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Cohort & Funnel Analysis</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>User Behavior Analytics</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>KPI Dashboard Creation</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Project Management */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-green-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <Settings className="w-8 h-8 text-green-500" />
+                  <h4 className="font-bold text-foreground mb-2">Users Over Features</h4>
+                  <p className="text-sm text-muted-foreground">I talk to real users weekly, not just look at dashboards. The best product insights come from understanding why users behave the way they do.</p>
+                </div>
+                
+                <div>
+                  <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Project Management</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Jira</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Confluence</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>OKR/KPI Tracking</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Agile Methodology</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Technical Skills */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <Settings className="w-8 h-8 text-purple-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">AI/ML & Technical Systems</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>AI/ML Product Integration</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>DevOps & CI/CD Automation</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Python & API Development</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>AWS/Cloud Infrastructure</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>System Architecture</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Leadership */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-red-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <Handshake className="w-8 h-8 text-red-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Leadership</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Cross-functional Teams</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Stakeholder Management</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>18-Member Team Lead</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Mentoring</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Certifications */}
-              <Card className="card-hover">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6">
-                    <MessageSquare className="w-8 h-8 text-indigo-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Certifications</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Python for Data Science (IBM)</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>LLMs (Google Cloud)</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Google Data Analytics</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Software Development (TATA)</li>
-                  </ul>
-                </CardContent>
-              </Card>
+                  <h4 className="font-bold text-foreground mb-2">System-Level Impact</h4>
+                  <p className="text-sm text-muted-foreground">Every product change affects the entire ecosystem. I map dependencies, predict second-order effects, and optimize for the whole system.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
