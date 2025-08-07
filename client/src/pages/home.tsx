@@ -193,10 +193,10 @@ export default function Home() {
                   <Button 
                     onClick={handleDownloadResume}
                     variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-full font-semibold transition-all duration-300"
+                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-8 py-3 rounded-full font-semibold transition-all duration-300"
                   >
-                    <Download className="w-4 h-4 mr-2 text-white" />
-                    <span className="text-white">Download Resume</span>
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Resume
                   </Button>
                 </div>
               </div>
