@@ -9,15 +9,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Health check endpoint for Railway
-  app.get("/", (req, res) => {
-    res.json({ 
-      status: "healthy", 
-      message: "Jit Goria Portfolio API is running",
-      timestamp: new Date().toISOString()
-    });
-  });
-
   // Health check endpoint (alternative)
   app.get("/health", (req, res) => {
     res.json({ 
