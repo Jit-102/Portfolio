@@ -186,7 +186,7 @@ export default function Home() {
                 <p className="text-xl mb-8 text-white/90 leading-relaxed">
                   I believe exceptional products emerge from the intersection of <span className="font-semibold text-yellow-200">human empathy</span>, <span className="font-semibold text-blue-200">technical possibility</span>, and <span className="font-semibold text-green-200">business strategy</span>. My mission: transforming complex challenges into elegant solutions that people actually want to use.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-6">
                   <Button 
                     onClick={() => scrollToSection('contact')}
                     className="bg-white text-primary hover:bg-slate-50 px-8 py-3 rounded-full font-semibold"
@@ -201,6 +201,29 @@ export default function Home() {
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
                   </Button>
+                </div>
+                
+                {/* LinkedIn Badge */}
+                <div className="flex justify-start">
+                  <div 
+                    className="badge-base LI-profile-badge bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20 hover:bg-white/20 transition-all duration-300" 
+                    data-locale="en_US" 
+                    data-size="large" 
+                    data-theme="light" 
+                    data-type="HORIZONTAL" 
+                    data-vanity="jit-goria-3a489415a" 
+                    data-version="v1"
+                  >
+                    <a 
+                      className="badge-base__link LI-simple-link text-white hover:text-white/90 flex items-center gap-2 text-sm font-medium" 
+                      href="https://in.linkedin.com/in/jit-goria-3a489415a?trk=profile-badge"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                      Connect on LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
